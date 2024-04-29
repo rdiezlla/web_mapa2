@@ -1,0 +1,71 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #map-container {
+    position: relative;
+    width: calc(100% - 300px); /* Ajusta el ancho del contenedor del mapa */
+    float: left;
+  }
+  
+  #warehouse-map {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+  }
+  
+  #controls, #truck-info {
+    width: 300px; /* Ancho fijo para la sección de controles e información */
+    float: left;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .marker {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .marker:hover .tooltip {
+    visibility: visible;
+  }
+  
